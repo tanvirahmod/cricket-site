@@ -4,14 +4,18 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
+prisma/dev.db
+/prisma/dev.db
+prisma/*.db
+/prisma/*.db
 
 # next.js
 /.next/
 /out/
+
 
 # production
 /build
@@ -27,6 +31,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
+
 
 # vercel
 .vercel

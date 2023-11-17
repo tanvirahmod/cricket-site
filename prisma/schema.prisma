@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model cricket_table{
+  id Int @id @default(autoincrement()) //
+  name String //
+  country String //
+  cricbuzz_personal_info String 
+  cricbuzz_bat_bowl_summary String //
+  cricbuzz_about_para String //
+  cricbuzz_url_id String //
+  cricinfo_url String  //
+  cricinfo_personal_info String //
+  cricinfo_teams String
+  cricinfo_bio String //
+  wiki_url String //
+  wiki_content String //
+  
+  @@index(fields: [name,country])
+} // migrate to create table by typing : npx prisma migrate dev 
+// then install prisma studio to control database on the browser by typing : npx prisma studio
